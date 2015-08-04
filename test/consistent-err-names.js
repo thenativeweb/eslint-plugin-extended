@@ -29,8 +29,9 @@ ruleTester.run('consistent-err-names', rule, {
   ],
 
   invalid: [
-    { code: '(function (barErr) {})()', errors: [{ message: 'Invalid error name.' }]},
-    { code: '(function (barErr) {})()', errors: [{ message: 'Invalid error name.' }], options: [ 'prefix' ]},
-    { code: '(function (errBar) {})()', errors: [{ message: 'Invalid error name.' }], options: [ 'suffix' ]}
+    { code: '(function (barErr) {})()', errors: [{ message: 'Must start with err.' }]},
+    { code: '(function (barErr) {})()', errors: [{ message: 'Must start with err.' }], options: [ 'prefix' ]},
+    { code: '(function (errBar) {})()', errors: [{ message: 'Must end with err.' }], options: [ 'suffix' ]},
+    { code: '(function (fooErrBar) {})()', errors: [{ message: 'Must not contain err.' }], options: [ 'prefix' ]}
   ]
 });

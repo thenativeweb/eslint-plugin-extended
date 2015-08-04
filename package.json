@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "grunt": "0.4.5",
-    "tourism": "0.20.2"
+    "tourism": "0.20.3"
   },
   "peerDependencies": {
     "eslint": ">= 1.0.0"
