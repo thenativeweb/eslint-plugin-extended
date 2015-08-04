@@ -6,7 +6,7 @@ machine:
 
 dependencies:
   pre:
-    - npm install -g grunt-cli
+    - npm install -g grunt-cli mocha
 
 test:
   override:
