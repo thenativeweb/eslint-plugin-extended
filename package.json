@@ -14,14 +14,12 @@
   ],
   "main": "lib/extended.js",
   "dependencies": {
-    "varname": "1.0.2"
+    "varname": "2.0.2"
   },
   "devDependencies": {
-    "grunt": "0.4.5",
-    "tourism": "0.20.3"
-  },
-  "peerDependencies": {
-    "eslint": ">= 1.0.0"
+    "gulp": "3.9.1",
+    "mocha": "2.4.5",
+    "roboter": "0.5.1"
   },
   "repository": {
     "type": "git",

@@ -1,10 +1,10 @@
 'use strict';
 
-var RuleTester = require('eslint').RuleTester;
+const RuleTester = require('eslint').RuleTester;
 
-var rule = require('../lib/consistent-err-names');
+const rule = require('../lib/consistent-err-names');
 
-var ruleTester = new RuleTester();
+const ruleTester = new RuleTester();
 
 ruleTester.run('consistent-err-names', rule, {
   valid: [
@@ -29,9 +29,21 @@ ruleTester.run('consistent-err-names', rule, {
   ],
 
   invalid: [
-    { code: '(function (barErr) {})()', errors: [{ message: 'Must start with err.' }]},
-    { code: '(function (barErr) {})()', errors: [{ message: 'Must start with err.' }], options: [ 'prefix' ]},
-    { code: '(function (errBar) {})()', errors: [{ message: 'Must end with err.' }], options: [ 'suffix' ]},
-    { code: '(function (fooErrBar) {})()', errors: [{ message: 'Must not contain err.' }], options: [ 'prefix' ]}
+    {
+      code: '(function (barErr) {})()',
+      errors: [{ message: 'Must start with err.' }]
+    }, {
+      code: '(function (barErr) {})()',
+      errors: [{ message: 'Must start with err.' }],
+      options: [ 'prefix' ]
+    }, {
+      code: '(function (errBar) {})()',
+      errors: [{ message: 'Must end with err.' }],
+      options: [ 'suffix' ]
+    }, {
+      code: '(function (fooErrBar) {})()',
+      errors: [{ message: 'Must not contain err.' }],
+      options: [ 'prefix' ]
+    }
   ]
 });

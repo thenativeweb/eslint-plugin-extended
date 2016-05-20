@@ -4,7 +4,9 @@ eslint-plugin-extended is a set of rules for ESLint.
 
 ## Installation
 
-    $ npm install eslint-plugin-extended
+```bash
+$ npm install eslint-plugin-extended
+```
 
 ## Quick start
 
@@ -15,7 +17,7 @@ First you need to add eslint-plugin-extended as a plugin to your ESLint configur
 When using `err` as a parameter name, from time to time you want to use `err` as a prefix or a suffix, as shown in the following example.
 
 ```javascript
-fs.readFile('/etc/passwd', function (errReadFile, data) {
+fs.readFile('/etc/passwd', (errReadFile, data) => {
   // ...
 });
 ```
@@ -28,14 +30,16 @@ consistent-err-names: [ 2, 'prefix' ]
 
 ## Running the build
 
-This module can be built using [Grunt](http://gruntjs.com/). Besides running the tests, this also analyses the code. To run Grunt, go to the folder where you have installed eslint-plugin-extended and run `grunt`. You need to have [grunt-cli](https://github.com/gruntjs/grunt-cli) installed.
+To build this module use [roboter](https://www.npmjs.com/package/roboter).
 
-    $ grunt
+```bash
+$ bot build-server
+```
 
 ## License
 
 The MIT License (MIT)
-Copyright (c) 2015 the native web.
+Copyright (c) 2015-2016 the native web.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
